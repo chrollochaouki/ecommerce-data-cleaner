@@ -40,4 +40,6 @@ def save(rows, path):
 rows = load("orders_raw.csv")
 cleaned = clean(rows)
 save(cleaned, "orders_clean.csv")
-print(f"Done: {len(cleaned)} rows saved")
+print(f"Rows read: {len(rows)}")
+print(f"Rows kept: {len(cleaned)}")
+print(f"Rows rejected: {len(rows) - len(cleaned)}")
